@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    max-height: 100vh; /* Asegurar que el contenedor no exceda la altura de la pantalla */
+}
+
+.container.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.body-parts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.body-part-link {
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.body-part-link img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.body-part-link:hover img {
+    transform: scale(1.1);
+}
+
+.body-part-link .body-part-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.body-part-link:hover .body-part-title {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.exercises-container {
+    margin-top: 20px;
+}
+
+.exercise-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.edit-buttons {
+    text-align: right;
+}
+
+.edit-buttons button {
+    margin-left: 5px;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+#form-container {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+#form-container h1 {
+    color: #333;
+}

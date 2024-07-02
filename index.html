@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Ejercicios de Gimnasio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="selection-container">
+        <h1>Selecciona la Parte del Cuerpo a Entrenar</h1>
+        <div class="body-parts">
+            <a href="#" class="body-part-link" data-part="biceps" data-image="https://th.bing.com/th/id/OIP.AsaCetBhOgYWEdm4_fGwJwHaIc?w=487&h=555&rs=1&pid=ImgDetMain">
+                <img src="https://th.bing.com/th/id/OIP.AsaCetBhOgYWEdm4_fGwJwHaIc?w=487&h=555&rs=1&pid=ImgDetMain" alt="Bíceps">
+                <span class="body-part-title">Bíceps</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="triceps" data-image="https://th.bing.com/th/id/OIP.nevwTCxvTYZFIO063lQEtgHaEx?rs=1&pid=ImgDetMain">
+                <img src="https://th.bing.com/th/id/OIP.nevwTCxvTYZFIO063lQEtgHaEx?rs=1&pid=ImgDetMain" alt="Tríceps">
+                <span class="body-part-title">Tríceps</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="espalda" data-image="https://ih0.redbubble.net/image.322219003.6973/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg">
+                <img src="https://ih0.redbubble.net/image.322219003.6973/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg" alt="Espalda">
+                <span class="body-part-title">Espalda</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="piernas" data-image="https://thumbs.dreamstime.com/b/human-body-muscular-system-anatomy-d-illustration-concept-176983010.jpg">
+                <img src="https://thumbs.dreamstime.com/b/human-body-muscular-system-anatomy-d-illustration-concept-176983010.jpg" alt="Piernas">
+                <span class="body-part-title">Piernas</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="gluteos" data-image="https://th.bing.com/th/id/OIP.XrcNOiKBupsBA5zmcKnlEAHaE8?rs=1&pid=ImgDetMain">
+                <img src="https://th.bing.com/th/id/OIP.XrcNOiKBupsBA5zmcKnlEAHaE8?rs=1&pid=ImgDetMain" alt="Glúteos">
+                <span class="body-part-title">Glúteos</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="hombros" data-image="https://www.alamy.es/aggregator-api/download?url=https://c8.alamy.com/compes/g1hd32/los-musculos-deltoides-anterior-anatomia-musculos-aislados-en-blanco-ilustracion-3d-g1hd32.jpg">
+                <img src="https://www.alamy.es/aggregator-api/download?url=https://c8.alamy.com/compes/g1hd32/los-musculos-deltoides-anterior-anatomia-musculos-aislados-en-blanco-ilustracion-3d-g1hd32.jpg" alt="Hombros">
+                <span class="body-part-title">Hombros</span>
+            </a>
+            <a href="#" class="body-part-link" data-part="abdomen" data-image="https://th.bing.com/th/id/OIP.D9UqcHXWK5TA_Y7BKZFqjAHaGh?w=500&h=440&rs=1&pid=ImgDetMain">
+                <img src="https://th.bing.com/th/id/OIP.D9UqcHXWK5TA_Y7BKZFqjAHaGh?w=500&h=440&rs=1&pid=ImgDetMain" alt="Abdomen">
+                <span class="body-part-title">Abdomen</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container hidden" id="form-container">
+        <h1>Registro de Ejercicio - <span id="parte"></span></h1>
+        <form id="exercise-form">
+            <div class="form-group">
+                <label for="exercise">Nombre del Ejercicio:</label>
+                <input type="text" id="exercise" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Peso:</label>
+                <input type="number" id="weight" min="0" step="any" required>
+                <select id="weight-unit">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="repetitions">Repeticiones:</label>
+                <input type="number" id="repetitions" min="0" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <div class="exercises-container" id="exercises-container"></div>
+        <button id="back-button" class="back-button">&#x2190;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
